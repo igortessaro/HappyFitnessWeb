@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HF.Service.Business;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,14 +10,38 @@ namespace HF.Service.Web.Controllers
 {
     public class HomeController : ApiController
     {
-        /// <summary>
-        /// apenas para testar o swagger
-        /// </summary>
-        /// <returns>mensagem</returns>
-        [HttpGet]
-        public string Teste()
+        public HomeController()
         {
-            return "funcionou";
+            this.AcademiaService = new AcademiaService();
+        }
+
+        public AcademiaService AcademiaService { get; set; }
+
+        [HttpGet]
+        public string GetValues()
+        {
+            string result = string.Empty;
+
+            try
+            {
+                var academiaList = this.AcademiaService.ObterTodasAcademias();
+
+                if(academiaList != null && academiaList.Any())
+                {
+                    result = string.Join(", ", academiaList.Select(a => a.Nome).ToArray());
+                }
+            }
+            catch(Exception ex)
+            {
+                result = "Falha no engano";
+            }
+
+            return result;
+        }
+
+        public string TesteComPrametro(string palavra)
+        {
+            return this.AcademiaService.ObterPorParteDoNome(palavra);
         }
     }
 }
