@@ -42,10 +42,15 @@
   <ItemGroup>
     <Compile Include="Entities\Academia.cs" />
     <Compile Include="Entities\Aparelho.cs" />
+    <Compile Include="Entities\AparelhoExercicio.cs" />
     <Compile Include="Entities\Atividade.cs" />
     <Compile Include="Entities\Exercicio.cs" />
     <Compile Include="Entities\Musculo.cs" />
+    <Compile Include="Entities\MusculoExercicio.cs" />
     <Compile Include="Entities\Pessoa.cs" />
+    <Compile Include="Entities\PessoaAcademia.cs" />
+    <Compile Include="Entities\Serie.cs" />
+    <Compile Include="Entities\Tabela.cs" />
     <Compile Include="Entities\Treino.cs" />
     <Compile Include="Entities\TreinoDiario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -55,18 +55,22 @@
     <Compile Include="Generic\EntityFrameworkWrapper.cs" />
     <Compile Include="Generic\ICrudRepository.cs" />
     <Compile Include="Generic\IGenericRepository.cs" />
+    <Compile Include="Mapping\AparelhoExercicioMap.cs" />
     <Compile Include="Mapping\AparelhoMap.cs" />
     <Compile Include="Mapping\AtividadeMap.cs" />
     <Compile Include="Mapping\ExercicioMap.cs" />
+    <Compile Include="Mapping\MusculoExercicioMap.cs" />
     <Compile Include="Mapping\MusculoMap.cs" />
+    <Compile Include="Mapping\PessoaAcademiaMap.cs" />
     <Compile Include="Mapping\PessoaMap.cs" />
+    <Compile Include="Mapping\SerieMap.cs" />
     <Compile Include="Mapping\TreinoDiarioMap.cs" />
     <Compile Include="Mapping\TreinoMap.cs" />
     <Compile Include="Repository\AcademiaRepository.cs" />
     <Compile Include="Context\HappyFitnessModel.cs" />
     <Compile Include="Mapping\AcademiaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Mapping\AparelhoRepository.cs" />
+    <Compile Include="Repository\AparelhoRepository.cs" />
     <Compile Include="Repository\AtividadeRepository.cs" />
     <Compile Include="Repository\ExercicioRepository.cs" />
     <Compile Include="Repository\MusculoRepository.cs" />
@@ -79,7 +83,6 @@
     <Compile Include="SatisfiedBy\ISatisfiedBy.cs" />
     <Compile Include="SatisfiedBy\Academia\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Musculo\SatisfiedById.cs" />
-    <Compile Include="SatisfiedBy\Pessoa\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\TreinoDiario\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Treino\SatisfiedById.cs" />
   </ItemGroup>
@@ -97,7 +100,9 @@
       <Name>HF.Domain</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="SatisfiedBy\Pessoa\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

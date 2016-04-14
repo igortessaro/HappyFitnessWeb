@@ -1,4 +1,4 @@
-﻿using HF.Domain.Entities;
+using HF.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
@@ -8,13 +8,17 @@ namespace HF.Repository.Mapping
         public AparelhoMap()
         {
             // Primary Key
-            this.HasKey(t => t.codAparelho);
+            this.HasKey(t => t.AparelhoCodigo);
 
-            // Tabela
+            // Properties
+            this.Property(t => t.Nome)
+                .IsRequired()
+                .HasMaxLength(150);
+
+            // Table & Column Mappings
             this.ToTable("Aparelho", "hf");
-            this.Property(t => t.codAparelho).HasColumnName("codAparelho");
+            this.Property(t => t.AparelhoCodigo).HasColumnName("AparelhoCodigo");
             this.Property(t => t.Nome).HasColumnName("Nome");
         }
     }
 }
-

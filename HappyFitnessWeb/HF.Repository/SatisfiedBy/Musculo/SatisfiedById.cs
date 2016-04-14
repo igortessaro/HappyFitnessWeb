@@ -15,7 +15,7 @@ namespace HF.Repository.SatisfiedBy.Musculo
 
         private Expression<Func<Domain.Entities.Musculo, bool>> Conditional(int id)
         {
-            return x => x.codMusculo == id;
+            return x => x.MusculoCodigo == id;
         }
     }
 }

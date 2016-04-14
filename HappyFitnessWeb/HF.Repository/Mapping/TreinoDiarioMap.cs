@@ -1,4 +1,4 @@
-﻿using HF.Domain.Entities;
+using HF.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
@@ -8,13 +8,20 @@ namespace HF.Repository.Mapping
         public TreinoDiarioMap()
         {
             // Primary Key
-            this.HasKey(t => t.codTreinoDiario);
+            this.HasKey(t => t.TreinoDiarioCodigo);
 
-            // Tabela
+            // Properties
+            // Table & Column Mappings
             this.ToTable("TreinoDiario", "hf");
-            this.Property(t => t.codTreinoDiario).HasColumnName("codTreinoDiario");
+            this.Property(t => t.TreinoDiarioCodigo).HasColumnName("TreinoDiarioCodigo");
+            this.Property(t => t.TreinoCodigo).HasColumnName("TreinoCodigo");
             this.Property(t => t.Tipo).HasColumnName("Tipo");
+
+            // Relationships
+            this.HasRequired(t => t.Treino)
+                .WithMany(t => t.TreinoDiarios)
+                .HasForeignKey(d => d.TreinoCodigo);
+
         }
     }
 }
-

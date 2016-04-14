@@ -1,5 +1,5 @@
 ﻿using HF.Domain.Entities;
-using HF.Repository;
+using HF.Repository.Repository;
 using System.Collections.Generic;
 
 namespace HF.Service.Business

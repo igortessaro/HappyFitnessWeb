@@ -15,7 +15,7 @@ namespace HF.Repository.SatisfiedBy.TreinoDiario
 
         private Expression<Func<Domain.Entities.TreinoDiario, bool>> Conditional(int id)
         {
-            return x => x.codTreinoDiario == id;
+            return x => x.TreinoDiarioCodigo == id;
         }
     }
 }

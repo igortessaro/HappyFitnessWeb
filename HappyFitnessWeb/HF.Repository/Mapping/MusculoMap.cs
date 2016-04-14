@@ -1,4 +1,4 @@
-﻿using HF.Domain.Entities;
+using HF.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
@@ -8,11 +8,16 @@ namespace HF.Repository.Mapping
         public MusculoMap()
         {
             // Primary Key
-            this.HasKey(t => t.codMusculo);
+            this.HasKey(t => t.MusculoCodigo);
 
-            // Tabela
+            // Properties
+            this.Property(t => t.Nome)
+                .IsRequired()
+                .HasMaxLength(150);
+
+            // Table & Column Mappings
             this.ToTable("Musculo", "hf");
-            this.Property(t => t.codMusculo).HasColumnName("codMusculo");
+            this.Property(t => t.MusculoCodigo).HasColumnName("MusculoCodigo");
             this.Property(t => t.Nome).HasColumnName("Nome");
         }
     }

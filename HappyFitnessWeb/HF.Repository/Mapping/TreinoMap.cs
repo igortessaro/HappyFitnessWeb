@@ -1,4 +1,4 @@
-﻿using HF.Domain.Entities;
+using HF.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
@@ -8,16 +8,26 @@ namespace HF.Repository.Mapping
         public TreinoMap()
         {
             // Primary Key
-            this.HasKey(t => t.codTreino);
+            this.HasKey(t => t.TreinoCodigo);
 
-            // Tabela
+            // Properties
+            // Table & Column Mappings
             this.ToTable("Treino", "hf");
-            this.Property(t => t.codTreino).HasColumnName("codTreino");
-            this.Property(t => t.codAluno).HasColumnName("codAluno");
-            this.Property(t => t.codInstrutor).HasColumnName("codInstrutor");
+            this.Property(t => t.TreinoCodigo).HasColumnName("TreinoCodigo");
+            this.Property(t => t.AlunoCodigo).HasColumnName("AlunoCodigo");
+            this.Property(t => t.InstrutorCodigo).HasColumnName("InstrutorCodigo");
             this.Property(t => t.Tipo).HasColumnName("Tipo");
-            this.Property(t => t.dataInicio).HasColumnName("dataInicio");
-            this.Property(t => t.dataFim).HasColumnName("dataFim");
+            this.Property(t => t.DataHoraInicio).HasColumnName("DataHoraInicio");
+            this.Property(t => t.DataHoraFim).HasColumnName("DataHoraFim");
+
+            // Relationships
+            this.HasRequired(t => t.Pessoa)
+                .WithMany(t => t.Treinoes)
+                .HasForeignKey(d => d.AlunoCodigo);
+            this.HasRequired(t => t.Pessoa1)
+                .WithMany(t => t.Treinoes1)
+                .HasForeignKey(d => d.InstrutorCodigo);
+
         }
     }
 }

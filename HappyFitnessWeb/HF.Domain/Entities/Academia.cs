@@ -1,9 +1,18 @@
-﻿namespace HF.Domain.Entities
+using System.Collections.Generic;
+
+namespace HF.Domain.Entities
 {
-    public class Academia
+    public partial class Academia
     {
+        public Academia()
+        {
+            this.PessoaAcademias = new List<PessoaAcademia>();
+        }
+
         public int AcademiaCodigo { get; set; }
 
         public string Nome { get; set; }
+
+        public ICollection<PessoaAcademia> PessoaAcademias { get; set; }
     }
 }

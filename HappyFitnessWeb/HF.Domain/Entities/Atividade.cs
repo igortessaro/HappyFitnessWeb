@@ -1,19 +1,17 @@
-﻿namespace HF.Domain.Entities
+namespace HF.Domain.Entities
 {
-    public class Atividade
+    public partial class Atividade
     {
-        public int codAtividade { get; set; }
+        public int AtividadeCodigo { get; set; }
 
-        public int codTreinoDiario { get; set; }
+        public int TreinoDiarioCodigo { get; set; }
 
-        public int Series { get; set; }
+        public int SerieCodigo { get; set; }
 
-        public int Repeticoes { get; set; }
+        public int? Feedback { get; set; }
 
-        public int codExercicio { get; set; }
+        public Serie Serie { get; set; }
 
-        public double Peso { get; set; }
-
-        public string Feedback { get; set; }
+        public TreinoDiario TreinoDiario { get; set; }
     }
 }

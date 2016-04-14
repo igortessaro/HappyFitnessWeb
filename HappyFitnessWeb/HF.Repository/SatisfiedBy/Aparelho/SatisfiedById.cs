@@ -15,7 +15,7 @@ namespace HF.Repository.SatisfiedBy.Aparelho
 
         private Expression<Func<Domain.Entities.Aparelho, bool>> Conditional(int id)
         {
-            return x => x.codAparelho == id;
+            return x => x.AparelhoCodigo == id;
         }
     }
 }

@@ -1,4 +1,4 @@
-﻿using HF.Domain.Entities;
+using HF.Domain.Entities;
 using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
@@ -10,7 +10,12 @@ namespace HF.Repository.Mapping
             // Primary Key
             this.HasKey(t => t.AcademiaCodigo);
 
-            // Tabela
+            // Properties
+            this.Property(t => t.Nome)
+                .IsRequired()
+                .HasMaxLength(150);
+
+            // Table & Column Mappings
             this.ToTable("Academia", "hf");
             this.Property(t => t.AcademiaCodigo).HasColumnName("AcademiaCodigo");
             this.Property(t => t.Nome).HasColumnName("Nome");

@@ -1,11 +1,23 @@
-﻿namespace HF.Domain.Entities
+using System.Collections.Generic;
+
+namespace HF.Domain.Entities
 {
-    public class Exercicio
+    public partial class Exercicio
     {
-        public int codExercicio { get; set; }
+        public Exercicio()
+        {
+            this.AparelhoExercicios = new List<AparelhoExercicio>();
+            this.MusculoExercicios = new List<MusculoExercicio>();
+        }
+
+        public int ExercicioCodigo { get; set; }
 
         public string Nome { get; set; }
 
         public string Descricao { get; set; }
+
+        public ICollection<AparelhoExercicio> AparelhoExercicios { get; set; }
+
+        public ICollection<MusculoExercicio> MusculoExercicios { get; set; }
     }
 }

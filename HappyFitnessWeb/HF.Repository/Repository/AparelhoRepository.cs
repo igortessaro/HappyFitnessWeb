@@ -5,25 +5,25 @@ using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 
-namespace HF.Repository
+namespace HF.Repository.Repository
 {
     public class AparelhoRepository : CrudRepository<HappyFitnessModel, Aparelho>
     {
         public List<Aparelho> ConsultarTodos()
         {
-            IQueryable<Aparelho> aparelhoQuery = this.Repository.Query<Aparelho>().AsNoTracking();
+            IQueryable<Aparelho> academiaQuery = this.Repository.Query<Aparelho>().AsNoTracking();
 
-            return aparelhoQuery.ToList();
+            return academiaQuery.ToList();
         }
 
         public string ConsultarLikeNome(string like)
         {
-            IQueryable<string> aparelhoQuery = this.Repository.Query<Aparelho>()
+            IQueryable<string> academiaQuery = this.Repository.Query<Aparelho>()
                 .Where(a => a.Nome.Contains(like))
                 .OrderBy(a => a.Nome)
                 .Select(a => a.Nome);
 
-            return aparelhoQuery.FirstOrDefault();
+            return academiaQuery.FirstOrDefault();
         }
     }
 }
