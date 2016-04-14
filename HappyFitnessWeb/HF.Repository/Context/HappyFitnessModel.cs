@@ -22,15 +22,15 @@ namespace HF.Repository.Context
         { get; set; }
         public DbSet<Atividade> Atividades
         { get; set; }
-        public DbSet<Exercicio> Exercicio
+        public DbSet<Exercicio> Exercicios
         { get; set; }
-        public DbSet<Musculo> Musculo
+        public DbSet<Musculo> Musculos
         { get; set; }
-        public DbSet<Pessoa> Pessoa
+        public DbSet<Pessoa> Pessoas
         { get; set; }
-        public DbSet<Treino> Treino
+        public DbSet<Treino> Treinos
         { get; set; }
-        public DbSet<TreinoDiario> TreinoDiario
+        public DbSet<TreinoDiario> TreinosDiarios
         { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

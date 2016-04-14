@@ -12,7 +12,7 @@
 
         public int codExercicio { get; set; }
 
-        public int Peso { get; set; }
+        public double Peso { get; set; }
 
         public string Feedback { get; set; }
     }
