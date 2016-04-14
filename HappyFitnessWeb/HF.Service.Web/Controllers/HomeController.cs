@@ -16,12 +16,14 @@ namespace HF.Service.Web.Controllers
             this.AparelhoService = new AparelhoService();
             this.AtividadeService = new AtividadeService();
             this.ExercicioService = new ExercicioService();
+            this.MusculoService = new MusculoService();
         }
 
         public AcademiaService AcademiaService { get; set; }
         public AparelhoService AparelhoService { get; set; }
         public AtividadeService AtividadeService { get; set; }
         public ExercicioService ExercicioService { get; set; }
+        public MusculoService MusculoService { get; set; }
 
         [HttpGet]
         public string GetValues()

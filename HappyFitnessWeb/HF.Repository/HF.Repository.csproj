@@ -58,6 +58,7 @@
     <Compile Include="Mapping\AparelhoMap.cs" />
     <Compile Include="Mapping\AtividadeMap.cs" />
     <Compile Include="Mapping\ExercicioMap.cs" />
+    <Compile Include="Mapping\MusculoMap.cs" />
     <Compile Include="Repository\AcademiaRepository.cs" />
     <Compile Include="Context\HappyFitnessModel.cs" />
     <Compile Include="Mapping\AcademiaMap.cs" />
@@ -65,11 +66,13 @@
     <Compile Include="Repository\AparelhoRepository.cs" />
     <Compile Include="Repository\AtividadeRepository.cs" />
     <Compile Include="Repository\ExercicioRepository.cs" />
+    <Compile Include="Repository\MusculoRepository.cs" />
     <Compile Include="SatisfiedBy\Aparelho\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Atividade\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Exercicio\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\ISatisfiedBy.cs" />
     <Compile Include="SatisfiedBy\Academia\SatisfiedById.cs" />
+    <Compile Include="SatisfiedBy\Musculo\SatisfiedById.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -85,6 +88,7 @@
       <Name>HF.Domain</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
