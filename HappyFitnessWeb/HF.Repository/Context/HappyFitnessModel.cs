@@ -28,6 +28,8 @@ namespace HF.Repository.Context
         { get; set; }
         public DbSet<Pessoa> Pessoa
         { get; set; }
+        public DbSet<Treino> Treino
+        { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
@@ -37,6 +39,7 @@ namespace HF.Repository.Context
             modelBuilder.Configurations.Add(new ExercicioMap());
             modelBuilder.Configurations.Add(new MusculoMap());
             modelBuilder.Configurations.Add(new PessoaMap());
+            modelBuilder.Configurations.Add(new TreinoMap());
 
         }
        

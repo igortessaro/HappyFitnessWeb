@@ -46,6 +46,7 @@
     <Compile Include="Entities\Exercicio.cs" />
     <Compile Include="Entities\Musculo.cs" />
     <Compile Include="Entities\Pessoa.cs" />
+    <Compile Include="Entities\Treino.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

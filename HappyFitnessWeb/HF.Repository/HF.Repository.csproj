@@ -60,6 +60,7 @@
     <Compile Include="Mapping\ExercicioMap.cs" />
     <Compile Include="Mapping\MusculoMap.cs" />
     <Compile Include="Mapping\PessoaMap.cs" />
+    <Compile Include="Mapping\TreinoMap.cs" />
     <Compile Include="Repository\AcademiaRepository.cs" />
     <Compile Include="Context\HappyFitnessModel.cs" />
     <Compile Include="Mapping\AcademiaMap.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Repository\ExercicioRepository.cs" />
     <Compile Include="Repository\MusculoRepository.cs" />
     <Compile Include="Repository\PessoaRepository.cs" />
+    <Compile Include="Repository\TreinoRepository.cs" />
     <Compile Include="SatisfiedBy\Aparelho\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Atividade\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Exercicio\SatisfiedById.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="SatisfiedBy\Academia\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Musculo\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\Pessoa\SatisfiedById.cs" />
+    <Compile Include="SatisfiedBy\Treino\SatisfiedById.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
