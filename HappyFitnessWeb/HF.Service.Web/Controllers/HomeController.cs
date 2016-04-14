@@ -14,10 +14,12 @@ namespace HF.Service.Web.Controllers
         {
             this.AcademiaService = new AcademiaService();
             this.AparelhoService = new AparelhoService();
+            this.AtividadeService = new AtividadeService();
         }
 
         public AcademiaService AcademiaService { get; set; }
         public AparelhoService AparelhoService { get; set; }
+        public AtividadeService AtividadeService { get; set; }
 
         [HttpGet]
         public string GetValues()
