@@ -14,6 +14,7 @@ namespace HF.Repository.Mapping
             this.ToTable("Pessoa", "hf");
             this.Property(t => t.codPessoa).HasColumnName("codPessoa");
             this.Property(t => t.Nome).HasColumnName("Nome");
+            this.Property(t => t.Tipo).HasColumnName("Tipo");
         }
     }
 }
