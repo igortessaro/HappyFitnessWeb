@@ -55,10 +55,13 @@
     <Compile Include="Generic\EntityFrameworkWrapper.cs" />
     <Compile Include="Generic\ICrudRepository.cs" />
     <Compile Include="Generic\IGenericRepository.cs" />
+    <Compile Include="Mapping\AparelhoMap.cs" />
     <Compile Include="Repository\AcademiaRepository.cs" />
     <Compile Include="Context\HappyFitnessModel.cs" />
     <Compile Include="Mapping\AcademiaMap.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\AparelhoRepository.cs" />
+    <Compile Include="SatisfiedBy\Aparelho\SatisfiedById.cs" />
     <Compile Include="SatisfiedBy\ISatisfiedBy.cs" />
     <Compile Include="SatisfiedBy\Academia\SatisfiedById.cs" />
   </ItemGroup>

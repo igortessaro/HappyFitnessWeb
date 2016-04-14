@@ -18,10 +18,15 @@ namespace HF.Repository.Context
 
         public DbSet<Academia> Academias
         { get; set; }
+        public DbSet<Aparelho> Aparelhos
+        { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Configurations.Add(new AcademiaMap());
+            modelBuilder.Configurations.Add(new AparelhoMap());
+
         }
+       
     }
 }

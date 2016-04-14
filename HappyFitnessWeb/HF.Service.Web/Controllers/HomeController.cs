@@ -13,9 +13,11 @@ namespace HF.Service.Web.Controllers
         public HomeController()
         {
             this.AcademiaService = new AcademiaService();
+            this.AparelhoService = new AparelhoService();
         }
 
         public AcademiaService AcademiaService { get; set; }
+        public AparelhoService AparelhoService { get; set; }
 
         [HttpGet]
         public string GetValues()
