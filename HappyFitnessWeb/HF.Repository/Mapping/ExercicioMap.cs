@@ -3,7 +3,7 @@ using System.Data.Entity.ModelConfiguration;
 
 namespace HF.Repository.Mapping
 {
-    public class ExercicioMap : EntityTypeConfiguration<Exercicio]>
+    public class ExercicioMap : EntityTypeConfiguration<Exercicio>
     {
         public ExercicioMap()
         {
