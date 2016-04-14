@@ -43,6 +43,7 @@
     <Compile Include="AcademiaService.cs" />
     <Compile Include="AparelhoService.cs" />
     <Compile Include="AtividadeService.cs" />
+    <Compile Include="ExercicioService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
