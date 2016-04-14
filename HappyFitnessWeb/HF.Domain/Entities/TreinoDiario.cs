@@ -6,7 +6,7 @@ namespace HF.Domain.Entities
     {
         public TreinoDiario()
         {
-            this.Atividades = new List<Atividade>();
+            this.AtividadeList = new List<Atividade>();
         }
 
         public int TreinoDiarioCodigo { get; set; }
@@ -15,7 +15,7 @@ namespace HF.Domain.Entities
 
         public int? Tipo { get; set; }
 
-        public ICollection<Atividade> Atividades { get; set; }
+        public ICollection<Atividade> AtividadeList { get; set; }
 
         public Treino Treino { get; set; }
     }

@@ -20,10 +20,10 @@ namespace HF.Repository.Mapping
 
             // Relationships
             this.HasRequired(t => t.Academia)
-                .WithMany(t => t.PessoaAcademias)
+                .WithMany(t => t.PessoaAcademiaList)
                 .HasForeignKey(d => d.AcademiaCodigo);
             this.HasRequired(t => t.Pessoa)
-                .WithMany(t => t.PessoaAcademias)
+                .WithMany(t => t.PessoaAcademiaList)
                 .HasForeignKey(d => d.PessoaCodigo);
 
         }

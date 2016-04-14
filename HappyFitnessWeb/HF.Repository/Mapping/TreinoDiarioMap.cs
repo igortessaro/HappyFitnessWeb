@@ -19,7 +19,7 @@ namespace HF.Repository.Mapping
 
             // Relationships
             this.HasRequired(t => t.Treino)
-                .WithMany(t => t.TreinoDiarios)
+                .WithMany(t => t.TreinoDiarioList)
                 .HasForeignKey(d => d.TreinoCodigo);
 
         }

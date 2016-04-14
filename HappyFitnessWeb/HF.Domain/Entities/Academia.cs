@@ -6,13 +6,13 @@ namespace HF.Domain.Entities
     {
         public Academia()
         {
-            this.PessoaAcademias = new List<PessoaAcademia>();
+            this.PessoaAcademiaList = new List<PessoaAcademia>();
         }
 
         public int AcademiaCodigo { get; set; }
 
         public string Nome { get; set; }
 
-        public ICollection<PessoaAcademia> PessoaAcademias { get; set; }
+        public ICollection<PessoaAcademia> PessoaAcademiaList { get; set; }
     }
 }

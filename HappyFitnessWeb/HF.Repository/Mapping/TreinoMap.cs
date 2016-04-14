@@ -21,11 +21,11 @@ namespace HF.Repository.Mapping
             this.Property(t => t.DataHoraFim).HasColumnName("DataHoraFim");
 
             // Relationships
-            this.HasRequired(t => t.Pessoa)
-                .WithMany(t => t.Treinoes)
+            this.HasRequired(t => t.Aluno)
+                .WithMany()//t => t.Treinoes)
                 .HasForeignKey(d => d.AlunoCodigo);
-            this.HasRequired(t => t.Pessoa1)
-                .WithMany(t => t.Treinoes1)
+            this.HasRequired(t => t.Instrutor)
+                .WithMany()//t => t.Treinoes1)
                 .HasForeignKey(d => d.InstrutorCodigo);
 
         }

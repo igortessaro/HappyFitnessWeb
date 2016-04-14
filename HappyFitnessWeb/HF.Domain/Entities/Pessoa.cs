@@ -6,9 +6,9 @@ namespace HF.Domain.Entities
     {
         public Pessoa()
         {
-            this.PessoaAcademias = new List<PessoaAcademia>();
-            this.Treinoes = new List<Treino>();
-            this.Treinoes1 = new List<Treino>();
+            this.PessoaAcademiaList = new List<PessoaAcademia>();
+            //this.Treinoes = new List<Treino>();
+            //this.Treinoes1 = new List<Treino>();
         }
 
         public int PessoaCodigo { get; set; }
@@ -17,10 +17,10 @@ namespace HF.Domain.Entities
 
         public int Tipo { get; set; }
 
-        public virtual ICollection<PessoaAcademia> PessoaAcademias { get; set; }
+        public ICollection<PessoaAcademia> PessoaAcademiaList { get; set; }
 
-        public virtual ICollection<Treino> Treinoes { get; set; }
+        //public ICollection<Treino> Treinoes { get; set; }
 
-        public virtual ICollection<Treino> Treinoes1 { get; set; }
+        //public ICollection<Treino> Treinoes1 { get; set; }
     }
 }

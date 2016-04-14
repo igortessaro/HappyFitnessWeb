@@ -6,7 +6,7 @@ namespace HF.Domain.Entities
     {
         public Treino()
         {
-            this.TreinoDiarios = new List<TreinoDiario>();
+            this.TreinoDiarioList = new List<TreinoDiario>();
         }
 
         public int TreinoCodigo { get; set; }
@@ -21,10 +21,10 @@ namespace HF.Domain.Entities
 
         public System.DateTime DataHoraFim { get; set; }
 
-        public Pessoa Pessoa { get; set; }
+        public Pessoa Aluno { get; set; }
 
-        public Pessoa Pessoa1 { get; set; }
+        public Pessoa Instrutor { get; set; }
 
-        public ICollection<TreinoDiario> TreinoDiarios { get; set; }
+        public ICollection<TreinoDiario> TreinoDiarioList { get; set; }
     }
 }

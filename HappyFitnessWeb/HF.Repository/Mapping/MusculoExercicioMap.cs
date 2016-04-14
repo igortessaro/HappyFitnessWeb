@@ -19,10 +19,10 @@ namespace HF.Repository.Mapping
 
             // Relationships
             this.HasRequired(t => t.Exercicio)
-                .WithMany(t => t.MusculoExercicios)
+                .WithMany(t => t.MusculoExercicioList)
                 .HasForeignKey(d => d.ExercicioCodigo);
             this.HasRequired(t => t.Musculo)
-                .WithMany(t => t.MusculoExercicios)
+                .WithMany(t => t.MusculoExercicioList)
                 .HasForeignKey(d => d.MusculoCodigo);
 
         }

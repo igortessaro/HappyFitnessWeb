@@ -6,13 +6,13 @@ namespace HF.Domain.Entities
     {
         public Musculo()
         {
-            this.MusculoExercicios = new List<MusculoExercicio>();
+            this.MusculoExercicioList = new List<MusculoExercicio>();
         }
 
         public int MusculoCodigo { get; set; }
 
         public string Nome { get; set; }
 
-        public ICollection<MusculoExercicio> MusculoExercicios { get; set; }
+        public ICollection<MusculoExercicio> MusculoExercicioList { get; set; }
     }
 }

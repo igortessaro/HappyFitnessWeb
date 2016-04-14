@@ -6,7 +6,7 @@ namespace HF.Domain.Entities
     {
         public Serie()
         {
-            this.Atividades = new List<Atividade>();
+            this.AtividadeList = new List<Atividade>();
         }
 
         public int SerieCodigo { get; set; }
@@ -19,6 +19,6 @@ namespace HF.Domain.Entities
 
         public int ExercicioCodigo { get; set; }
 
-        public ICollection<Atividade> Atividades { get; set; }
+        public ICollection<Atividade> AtividadeList { get; set; }
     }
 }
