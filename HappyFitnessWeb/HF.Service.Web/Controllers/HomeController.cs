@@ -17,6 +17,7 @@ namespace HF.Service.Web.Controllers
             this.AtividadeService = new AtividadeService();
             this.ExercicioService = new ExercicioService();
             this.MusculoService = new MusculoService();
+            this.PessoaService = new PessoaService();
         }
 
         public AcademiaService AcademiaService { get; set; }
@@ -24,6 +25,7 @@ namespace HF.Service.Web.Controllers
         public AtividadeService AtividadeService { get; set; }
         public ExercicioService ExercicioService { get; set; }
         public MusculoService MusculoService { get; set; }
+        public PessoaService PessoaService { get; set; }
 
         [HttpGet]
         public string GetValues()

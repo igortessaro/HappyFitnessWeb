@@ -45,6 +45,7 @@
     <Compile Include="AtividadeService.cs" />
     <Compile Include="ExercicioService.cs" />
     <Compile Include="MusculoService.cs" />
+    <Compile Include="PessoaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
