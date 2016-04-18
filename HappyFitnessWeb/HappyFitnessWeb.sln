@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF.Service.Business", "HF.S
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF.Core", "HF.Core\HF.Core.csproj", "{DE29E9E2-297D-4A33-BA86-984B082F34A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HF.DataTransferObject", "HF.DataTransferObject\HF.DataTransferObject.csproj", "{2DBBB104-2811-44E6-AA32-995319927FCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{DE29E9E2-297D-4A33-BA86-984B082F34A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE29E9E2-297D-4A33-BA86-984B082F34A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE29E9E2-297D-4A33-BA86-984B082F34A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DBBB104-2811-44E6-AA32-995319927FCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DBBB104-2811-44E6-AA32-995319927FCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DBBB104-2811-44E6-AA32-995319927FCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DBBB104-2811-44E6-AA32-995319927FCE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

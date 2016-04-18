@@ -136,6 +136,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ExercicioController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -144,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+    <None Include="Properties\PublishProfiles\happyFitness - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -156,6 +158,10 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\HF.DataTransferObject\HF.DataTransferObject.csproj">
+      <Project>{2dbbb104-2811-44e6-aa32-995319927fce}</Project>
+      <Name>HF.DataTransferObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HF.Domain\HF.Domain.csproj">
       <Project>{6cf82e86-35e5-4ddf-8426-9711bef46e2a}</Project>
       <Name>HF.Domain</Name>

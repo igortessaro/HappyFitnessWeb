@@ -40,17 +40,24 @@ namespace HF.Service.Web.Controllers
             {
                 var academiaList = this.AcademiaService.ObterTodasAcademias();
 
-                if(academiaList != null && academiaList.Any())
+                if (academiaList != null && academiaList.Any())
                 {
                     result = string.Join(", ", academiaList.Select(a => a.Nome).ToArray());
                 }
             }
-            catch(Exception ex)
+            catch (Exception ex)
             {
-                result = "Falha no engano";
+                result = this.ObterMensagemErro(ex);
             }
 
             return result;
+        }
+
+        private string ObterMensagemErro(Exception ex)
+        {
+            if (ex.InnerException == null) return ex.Message;
+
+            return this.ObterMensagemErro(ex.InnerException);
         }
 
         public string TesteComPrametro(string palavra)
