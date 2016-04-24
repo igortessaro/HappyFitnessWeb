@@ -17,6 +17,8 @@ namespace HF.Domain.Entities
 
         public int Tipo { get; set; }
 
+        public bool Situacao { get; set; }
+
         public ICollection<PessoaAcademia> PessoaAcademiaList { get; set; }
 
         //public ICollection<Treino> Treinoes { get; set; }

@@ -20,6 +20,7 @@ namespace HF.Repository.Mapping
             this.Property(t => t.PessoaCodigo).HasColumnName("PessoaCodigo");
             this.Property(t => t.Nome).HasColumnName("Nome");
             this.Property(t => t.Tipo).HasColumnName("Tipo");
+            this.Property(t => t.Situacao).HasColumnName("Situacao");
         }
     }
 }

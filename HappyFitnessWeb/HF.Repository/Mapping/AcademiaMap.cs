@@ -19,6 +19,7 @@ namespace HF.Repository.Mapping
             this.ToTable("Academia", "hf");
             this.Property(t => t.AcademiaCodigo).HasColumnName("AcademiaCodigo");
             this.Property(t => t.Nome).HasColumnName("Nome");
+            this.Property(t => t.Situacao).HasColumnName("Situacao");
         }
     }
 }

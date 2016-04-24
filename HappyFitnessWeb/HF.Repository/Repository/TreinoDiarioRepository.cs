@@ -15,6 +15,5 @@ namespace HF.Repository
 
             return treinoDiarioQuery.ToList();
         }
-
     }
 }

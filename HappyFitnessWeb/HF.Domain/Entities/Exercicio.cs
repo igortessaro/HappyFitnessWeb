@@ -7,7 +7,9 @@ namespace HF.Domain.Entities
         public Exercicio()
         {
             this.AparelhoExercicioList = new List<AparelhoExercicio>();
+            this.ImagemExercicioList = new List<ImagemExercicio>();
             this.MusculoExercicioList = new List<MusculoExercicio>();
+            this.SerieList = new List<Serie>();
         }
 
         public int ExercicioCodigo { get; set; }
@@ -16,8 +18,12 @@ namespace HF.Domain.Entities
 
         public string Descricao { get; set; }
 
-        public ICollection<AparelhoExercicio> AparelhoExercicioList { get; set; }
+        public virtual ICollection<AparelhoExercicio> AparelhoExercicioList { get; set; }
 
-        public ICollection<MusculoExercicio> MusculoExercicioList { get; set; }
+        public virtual ICollection<ImagemExercicio> ImagemExercicioList { get; set; }
+
+        public virtual ICollection<MusculoExercicio> MusculoExercicioList { get; set; }
+
+        public virtual ICollection<Serie> SerieList { get; set; }
     }
 }

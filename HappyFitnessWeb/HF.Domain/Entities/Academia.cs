@@ -13,6 +13,8 @@ namespace HF.Domain.Entities
 
         public string Nome { get; set; }
 
+        public bool Situacao { get; set; }
+
         public ICollection<PessoaAcademia> PessoaAcademiaList { get; set; }
     }
 }

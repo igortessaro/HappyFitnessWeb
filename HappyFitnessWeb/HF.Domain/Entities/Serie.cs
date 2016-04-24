@@ -4,11 +4,6 @@ namespace HF.Domain.Entities
 {
     public partial class Serie
     {
-        public Serie()
-        {
-            this.AtividadeList = new List<Atividade>();
-        }
-
         public int SerieCodigo { get; set; }
 
         public int? Repeticoes { get; set; }
@@ -19,6 +14,12 @@ namespace HF.Domain.Entities
 
         public int ExercicioCodigo { get; set; }
 
-        public ICollection<Atividade> AtividadeList { get; set; }
+        public int AtividadeCodigo { get; set; }
+
+        public int Ordem { get; set; }
+
+        public Atividade Atividade { get; set; }
+
+        public Exercicio Exercicio { get; set; }
     }
 }

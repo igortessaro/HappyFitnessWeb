@@ -18,6 +18,16 @@ namespace HF.Repository.Mapping
             this.Property(t => t.Peso).HasColumnName("Peso");
             this.Property(t => t.TempoSegundos).HasColumnName("TempoSegundos");
             this.Property(t => t.ExercicioCodigo).HasColumnName("ExercicioCodigo");
+            this.Property(t => t.AtividadeCodigo).HasColumnName("AtividadeCodigo");
+            this.Property(t => t.Ordem).HasColumnName("Ordem");
+
+            // Relationships
+            this.HasRequired(t => t.Atividade)
+                .WithMany(t => t.SerieList)
+                .HasForeignKey(d => d.AtividadeCodigo);
+            this.HasRequired(t => t.Exercicio)
+                .WithMany(t => t.SerieList)
+                .HasForeignKey(d => d.ExercicioCodigo);
         }
     }
 }
