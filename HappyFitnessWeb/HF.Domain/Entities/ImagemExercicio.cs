@@ -8,7 +8,7 @@ namespace HF.Domain.Entities
 {
     public partial class ImagemExercicio
     {
-        public int ImagemExercicio1 { get; set; }
+        public int ImagemExercicioCodigo { get; set; }
 
         public string Url { get; set; }
 

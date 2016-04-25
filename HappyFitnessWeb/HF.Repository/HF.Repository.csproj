@@ -96,6 +96,10 @@
       <Project>{de29e9e2-297d-4a33-ba86-984b082f34a5}</Project>
       <Name>HF.Core</Name>
     </ProjectReference>
+    <ProjectReference Include="..\HF.DataTransferObject\HF.DataTransferObject.csproj">
+      <Project>{2dbbb104-2811-44e6-aa32-995319927fce}</Project>
+      <Name>HF.DataTransferObject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\HF.Domain\HF.Domain.csproj">
       <Project>{6cf82e86-35e5-4ddf-8426-9711bef46e2a}</Project>
       <Name>HF.Domain</Name>

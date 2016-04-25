@@ -8,7 +8,7 @@ namespace HF.Repository.Mapping
         public ImagemExercicioMap()
         {
             // Primary Key
-            this.HasKey(t => t.ImagemExercicio1);
+            this.HasKey(t => t.ImagemExercicioCodigo);
 
             // Properties
             this.Property(t => t.Url)
@@ -17,7 +17,7 @@ namespace HF.Repository.Mapping
 
             // Table & Column Mappings
             this.ToTable("ImagemExercicio", "hf");
-            this.Property(t => t.ImagemExercicio1).HasColumnName("ImagemExercicio");
+            this.Property(t => t.ImagemExercicioCodigo).HasColumnName("ImagemExercicioCodigo");
             this.Property(t => t.Url).HasColumnName("Url");
             this.Property(t => t.ExercicioCodigo).HasColumnName("ExercicioCodigo");
             this.Property(t => t.Situacao).HasColumnName("Situacao");

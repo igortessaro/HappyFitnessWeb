@@ -16,6 +16,8 @@ namespace HF.Service.Business
 
         public List<ExercicioDTO> ObterExercicos(int pessoaCodigo)
         {
+            //var query = this.
+
             List<ExercicioDTO> result = new List<ExercicioDTO>();
 
             for (int i = 0; i < 15; i++)

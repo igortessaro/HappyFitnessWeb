@@ -1,4 +1,5 @@
-﻿using HF.Domain.Entities;
+﻿using HF.DataTransferObject.Exercicio;
+using HF.Domain.Entities;
 using HF.Repository;
 using System.Collections.Generic;
 
@@ -13,15 +14,9 @@ namespace HF.Service.Business
 
         public PessoaRepository PessoaRepository { get; set; }
 
-        public List<Pessoa> ObterTodasPessoas()
+        public List<ExercicioDTO> ObterTreino(int pessoaCodigo)
         {
-            return this.PessoaRepository.ConsultarTodos();
+            return this.PessoaRepository.ObterTreino(pessoaCodigo);
         }
-
-        public string ObterPorParteDoNome(string like)
-        {
-            return this.PessoaRepository.ConsultarLikeNome(like);
-        }
-
     }
 }

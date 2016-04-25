@@ -14,14 +14,17 @@ namespace HF.Service.Web.Controllers
         public ExercicioController()
         {
             this.ExercicioService = new ExercicioService();
+            this.PessoaService = new PessoaService();
         }
 
         public ExercicioService ExercicioService { get; set; }
 
+        public PessoaService PessoaService { get; set; }
+
         [HttpGet]
         public ExercicioDTO[] Obter(int pessoaCodigo)
         {
-            return this.ExercicioService.ObterExercicos(pessoaCodigo).ToArray();
+            return this.PessoaService.ObterTreino(pessoaCodigo).ToArray();
         }
     }
 }
