@@ -24,7 +24,7 @@ namespace HF.Service.Web.Controllers
         [HttpGet]
         public ExercicioDTO[] Obter(int pessoaCodigo)
         {
-            return this.PessoaService.ObterTreino(pessoaCodigo).ToArray();
+            return this.ExercicioService.ObterExercicos(pessoaCodigo).ToArray();
         }
     }
 }

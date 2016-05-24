@@ -2,6 +2,7 @@
 using HF.Domain.Entities;
 using HF.Repository;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace HF.Service.Business
 {
@@ -16,18 +17,15 @@ namespace HF.Service.Business
 
         public List<ExercicioDTO> ObterExercicos(int pessoaCodigo)
         {
-            //var query = this.
+            List<Exercicio> exercicioList = this.ObterTodosExercicios();
 
-            List<ExercicioDTO> result = new List<ExercicioDTO>();
-
-            for (int i = 0; i < 15; i++)
+            return exercicioList.Select(e => new ExercicioDTO
             {
-                ExercicioDTO e = new ExercicioDTO();
-                e.SetDefault(i);
-                result.Add(e);
-            }
-
-            return result;
+                Nome = e.Nome,
+                Icone = "Teste",
+                QuantidadeRepeticoes = 10,
+                QuantidadeSerie = 10
+            }).ToList();
         }
 
         public List<Exercicio> ObterTodosExercicios()
