@@ -16,12 +16,19 @@ namespace HF.DataTransferObject.Exercicio
 
         public int QuantidadeRepeticoes { get; set; }
 
-        public void SetDefault(int value)
-        {
-            this.Icone = "img/fitness-training-311490_960_720.png";
-            this.Nome = $"Exercicio {value}";
-            this.QuantidadeRepeticoes = 15;
-            this.QuantidadeSerie = 4;
-        }
+        List<ExercicioDTO> Exercicio = this.Repository.Query<Exercicio>()
+             .AsNoTracking()
+
+             .Include(imgEx => imgEx.ImagemExercicio)
+             .Include(sr => sr.Serie)
+
+             .Select(imgEx => new ListaEx
+             {
+                 this.Icone = imgEx.Url,
+                 this.Nome = Nome,
+                 this.QuantidadeRepeticoes = sr.Repeticoes
+             })
+             .ToList();
+
     }
 }
